@@ -1,0 +1,143 @@
+html {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  color: #333;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/beige.webp);
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+        "hd hd"
+        "hero hero"
+        "sidebar main"
+        "foot foot";
+  height: 100vh;
+  margin: 0;
+}
+
+
+header {
+  grid-area: hd;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #eee;
+  padding: 10px;
+}
+
+.sidebar-item {
+  background-color: #eee;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.sidebar-item:hover {
+  background-color: #ddd;
+}
+
+
+.hero {
+  grid-area: hero;
+  background: url(images/webdev-hero.jpg) no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #cc5200;
+}
+
+
+.main {
+  grid-area: main;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.featured, .articlesection, .author, .links {
+  flex: 1;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.618);
+  background-color: #E0F7FA;
+  color: #ecfffb;
+  background-color: #0C2E44;
+}
+
+
+.foot {
+  grid-area: foot;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
